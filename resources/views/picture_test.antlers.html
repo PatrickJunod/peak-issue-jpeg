@@ -1,0 +1,8 @@
+{{# Minimal repro: the Peak Tools picture partial with a single asset. #}}
+<main style="max-width: 900px; margin: 2rem auto; font-family: sans-serif;">
+    <h1>{{ title }}</h1>
+    <p>Asset: <code>{{ image }}</code></p>
+    <p><a href="/">.jpg (works)</a> · <a href="/jpeg">.jpeg (crashes)</a></p>
+
+    {{ partial:statamic-peak-tools::components/picture :image="image" sizes="100vw" }}
+</main>
